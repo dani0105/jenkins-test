@@ -13,10 +13,10 @@ app.listen(port, () => {
 var Twitter = require('twitter');
 
 var client = new Twitter({
-    consumer_key: 'FAgUFrxXQN1kAOUuMnr1rAqN5',
-    consumer_secret: 'fKU2MgIcanX5Grr0OSvRhxKxoMBO6qwJJJahiq4hMAYyqoDMxQ',
-    access_token_key: '1520862634094231552-VNHg4TK2kNsRBemIazWwW28t6rozcU',
-    access_token_secret: 'nXvGl9drqzDiBPBiyohonmNLA45TdPFtMKX3q42ps8sMW'
+    consumer_key: process.env.CONSUMER_KEY,
+    consumer_secret: process.env.CONSUMER_SECRET,
+    access_token_key: process.env.ACCESS_TOKEN_KEY,
+    access_token_secret: process.env.ACCESS_TOKEN_SECRET
 });
 
 setInterval(()=>{
