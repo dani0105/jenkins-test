@@ -3,7 +3,7 @@ const app = express()
 const port = 3000
 
 app.get('/', (req, res) => {
-  res.send(`Proyecto de ${process.env.APP_NAME | 'Express' }`)
+  res.send(`Proyecto de ${process.env.APP_NAME || 'Express' }`)
 })
 
 app.listen(port, () => {
@@ -27,5 +27,5 @@ setInterval(()=>{
   .catch(function (error) {
     throw error;
   })
-}, process.env.TIME | 600000);
+}, process.env.TIME || 600000);
 
