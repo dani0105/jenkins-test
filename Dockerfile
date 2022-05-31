@@ -1,4 +1,4 @@
-FROM node:15
+FROM node:12-alpine AS BUILD_IMAGE
 
 WORKDIR /usr/src/app
 
@@ -13,5 +13,3 @@ COPY . .
 expose 8081
 
 CMD [ "node", "index.js" ]
-
-
